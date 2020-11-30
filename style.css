@@ -1,0 +1,129 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FF3CAC;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+video {
+  max-width: 80vw;
+}
+
+@media screen and (orientation: landscape) {
+  video {
+    max-width: 60vw;
+  }
+}
+
+.player {
+  position: relative;
+  overflow: hidden;
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.player__controls:hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.progress {
+  height: 8px;
+  background-color: #5e6472;
+}
+
+.progress__filled {
+  height: 100%;
+  width: 40%;
+  background-color: #aed9e0;
+}
+
+.control__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.player__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  margin: 0 5px;
+  background-color: #000;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.player__button__dash {
+  height: 12px;
+  border-color: transparent transparent transparent #fff;
+  -webkit-transition: 100ms all ease;
+  transition: 100ms all ease;
+  will-change: border-width;
+  display: block;
+  border-style: double;
+  border-width: 0px 0 0px 12px;
+}
+
+.player__button.paused .player__button__dash {
+  border-style: solid;
+  border-width: 6px 0 6px 12px;
+}
+
+.player__button:focus {
+  outline: none;
+}
+
+.player__toggle {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #fff;
+}
+
+.player__slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 10px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+/*# sourceMappingURL=style.css.map */
